@@ -1,0 +1,50 @@
+apply plugin: 'groovy'
+apply plugin: 'maven'
+//apply plugin: 'com.novoda.bintray-release'
+
+ext {
+    bintrayName = 'eventbus-register'
+    artifact = bintrayName
+    libraryName = 'eventbus register gradle plugin'
+    libraryDescription = 'A gradle plugin used for eventbus map register'
+}
+
+dependencies {
+    compile gradleApi()
+    compile localGroovy()
+}
+
+dependencies {
+    compile 'com.android.tools.build:gradle:2.1.3'
+}
+
+repositories {
+    mavenCentral()
+}
+
+group='com.zee.plugin'
+version='1.0.1'
+
+//uploadArchives {
+//    repositories {
+//        mavenDeployer {
+//            //提交到远程服务器：
+//            // repository(url: "http://www.xxx.com/repos") {
+//            //    authentication(userName: "admin", password: "admin")
+//            // }
+//            //本地的Maven地址设置为D:/repos
+//            repository(url: uri('D:/repos'))
+//        }
+//    }
+//}
+
+
+//publish {
+//    userOrg = 'zp110570'
+//    groupId = 'com.zee'
+//    artifactId = 'register-gradle-plugin'
+//    version = '1.0.0'
+//    description = 'new version'
+////    website = 'https://github.com/zp110580/register'
+//}
+
